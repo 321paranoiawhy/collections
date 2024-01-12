@@ -1,0 +1,58 @@
+env:
+  browser: true
+  node: true
+  es2021: true
+extends:
+  - standard-with-typescript
+  - plugin:vue/vue3-essential
+parser: @typescript-eslint/parser
+parserOptions:
+  ecmaVersion: latest # 最新版本 EcmaScript
+  sourceType: module
+# 插件
+plugins:
+  - vue
+# 规则
+# off <-> 0 禁用
+# warn <-> 1 警告
+# error <-> 2 错误且无法通过 eslint 检查
+rules:
+  strict: 2 # 严格模式
+  semi: 0 # 行尾分号
+  eol-last: 2 # 文件末尾强制换行
+  eqeqeq: 2 # 强制使用三等号 === 替代双等号 == 进行比较
+  camelcase: 2 # 驼峰命名
+  # 圈复杂度
+  # https://en.wikipedia.org/wiki/Cyclomatic_complexity
+  complexity:
+    - 0
+    - 10
+  # 引号风格
+  quotes:
+    - 2
+    - double
+  # 缩进风格
+  indent:
+    - 2
+    - 4
+  # 函数最多只能有三个入参
+  max-params:
+    - 0
+    - 3
+  no-var: 2 # 禁止使用 var
+  prefer-const: 2 # 优先使用 const
+  no-undefined: 2
+  no-void: 2 # void 操作符
+  no-unused-vars: 2
+  no-unused-expressions: 2
+  no-console: 2
+  no-debugger: 2
+  no-unreachable: 2
+  no-extra-semi: 2
+  no-magic-numbers: 2
+  no-dupe-keys: 2 # 对象键不可重复
+  no-eval: 1 # 使用 eval 语句
+  no-redeclare: 2 # 重复声明变量
+  use-isnan: 2 # 使用 isNaN 比较 NaN
+  valid-jsdoc: 2 # jsdoc 规则
+

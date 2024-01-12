@@ -1,0 +1,9 @@
+// 多行文本溢出
+// 使用示例: @include line-clamp(2)
+// https://tailwindcss.com/docs/line-clamp
+@mixin line-clamp($line: 1) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
